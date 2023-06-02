@@ -11,4 +11,4 @@ Esse é um projeto desenvolvido com o curso de HTML e CSS da Alura.
 ------------------------------------------------------------------------------------------------------------------
 ### Jean Pierre
 
-**Instagram:** [] (https://instagram.com/jptr.2189 "Instagram de Jean Pierre")
+**Instagram:** [](https://instagram.com/jptr.2189)
