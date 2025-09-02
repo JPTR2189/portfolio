@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Krona+One&family=Montserrat:wght@600&family=Rajdhani:wght@500&display=swap');
 
 :root{
-    --cor-primaria: #FF6363;
-    --cor-secundaria: #BAFFB4;
-    --cor-terciaria: #edae49;
-    --cor-hover: rgb(151, 115, 31);
-    --cor-botao: white;
+    --cor-primaria: #000000;
+    --cor-secundaria: #FFFFFF;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #22D4FD;
+    --cor-botao: #202020;
+    --cor-rodape: #ffad29;
 
     --fonte-primaria: 'Krona One', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
@@ -15,7 +16,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-size: 80%; */
 }
 
 body {
@@ -26,37 +26,50 @@ body {
 }
 
 .cabecalho{
-    padding: 2% 0% 0% 15%;
+    padding: 2% 0% 0% 5%;
 }
 
 .cabecalho__menu{
     display: flex;
-    gap: 80px;
+    gap: 20px;
 }
 
 .cabecalho__menu__botoes{
    font-family: 'Montserrat', sans-serif;
    font-weight: 600;
-   font-size: 1.5rem;
+   font-size: 1.25rem;
    padding: 0.5% 2%;
-   border: 2px inset var(--cor-secundaria);
-   color: var(--cor-botao);
+   border: 2px ;
+   border-radius: 1rem;
+   padding: 10px 45px;
+   background-color: var(--cor-botao);
+   color: var(--cor-secundaria);
    text-decoration: none;
+   transition: color 0.5s ease;
+
 }
 
 .cabecalho__menu__botoes:hover{
     background-color: var(--cor-hover);
-    color: var(--cor-terciaria);
-    font-family: 'Rajdhani', sans-serif;
-    border: 3.5px solid var(--cor-secundaria);
+    color: var(--cor-primaria);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600 ;
+    /* border: 3.5px solid var(--cor-secundaria); */
 
 }
 
+
+
+.icone:hover {
+    color: var(--cor-primaria);
+}
+
 .apresentaçao {
-    padding: 5% 15%;
+    padding: 5% 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     gap: 82px;
     
 }
@@ -66,14 +79,14 @@ body {
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    
+    gap: 5rem;    
 }
 
 .apresentaçao__conteudo__curriculo{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5em;
+    margin-bottom: 2rem;
     
     
 }
@@ -81,7 +94,7 @@ body {
 .apresentaçao__conteudo__habilidades{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.5rem;
     
     
 }
@@ -89,7 +102,7 @@ body {
 .apresentaçao__conteudo__curriculo__estudos {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.5rem;
 }
 
 .apresentaçao__conteudo__titulo {
@@ -101,16 +114,17 @@ body {
 
 .apresentaçao__conteudo__titulo__sobre_mim{
     background-color: var(--cor-terciaria);
-    color: #E4FFFE;
+    color: var(--cor-primaria);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60%;
-    height: 75px;
-    border: 2px solid var(--cor-secundaria);
-    font-family: var(--fonte-primaria);
+    width: 26rem;
+    height: 6.5rem;
+    border: 2px solid;
+    border-radius: 16px;
+    font-family: var(--fonte-secundaria);
     font-weight: 500;
-    font-size: 1.625rem;
+    font-size: 2rem;
 }
 
 .texto-destaque {
@@ -121,13 +135,14 @@ body {
 .apresentaçao__conteudo__paragrafo {
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
+    width: 37rem;
 }
 
 .apresentaçao__links {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 32px
+    gap: 4.25rem
 }
 
 .apresentaçao__links__subtitulo {
@@ -136,47 +151,248 @@ body {
     font-weight: 400;
 }
 
-.apresentaçao__links__botao {
-    width: 50%;
+.apresentaçao__links__botoes {
     display: flex;
-    justify-content: center;
-    border: 2px inset var(--cor-secundaria);
-    text-align: center;
+    flex-direction: column;
+    gap: 1rem
+}
+
+.apresentaçao__links__botao {
+    width: 13.5rem;
+    display: flex;
+    justify-content: flex-start;
+    border: 3px outset var(--cor-secundaria);
     border-radius: 16px;
     font-size: 1.5rem;
-    padding: 21.5px 0px;
-    color: var(--cor-botao);
+    padding: 1.4rem 0 1.4rem 2rem;
+    color: var(--cor-secundaria);
     text-decoration: none;
     font-family:  'Montserrat', sans-serif;
     font-weight: 600;
     gap: 16px;
+    transition: color 0.5s ease;
+}
+
+.apresentaçao__links__botao .icone {
+    width: 2rem;
+    height: 2rem;
+    color: var(--cor-terciaria);
+    color: inherit;
+    transition: color 0.3s ease;
 }
 
 .apresentaçao__links__botao:hover {
-    color: var(--cor-terciaria);
+    color: var(--cor-primaria);
     background-color: var(--cor-hover);
-    font-family: 'Rajdhani', sans-serif;
-    border: 3.5px solid var(--cor-secundaria);
-    padding: 4%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.65rem;
+    border: 1px solid var(--cor-primaria);
+}
+
+.apresentaçao__links__botao:hover .icone{
+    color: var(--cor-primaria);
+
 }
 
 .rodape{
     padding: 24px;
     display: flex;
     background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
     justify-content: center ;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 .apresentaçao__imagem{
     border-radius: 80% ;
-    width: 50%;
-
-    /* height: 80%; */
+    width: 34.4rem;
+    height: 34.4rem;
    
 }
+
+.apresentaçao__imagem_curriculo {
+    border-radius: 80% ;
+    width: 34.4rem;
+    height: 34.4rem;
+    margin-bottom: 75rem;
+   
+}
+
+.mockup_iphone_portfolio {
+   
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+}
+
+.phone-demo {
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    transform: translateY(-4rem); 
+
+
+}
+
+.device {
+    position: relative;
+    width: 22.5rem;
+    max-width: 90vw;
+    aspect-ratio: 9 / 19.5;
+}
+
+.device video {
+  position: absolute;
+  inset: 5% 6.5% 9% 4.5%;  
+  width: 90%;
+  height: 90%;
+  object-fit: cover;        
+  border-radius: 28px;
+}
+
+.apresentaçao__conteudo__portfolio {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    width: 37rem;
+}
+
+.logo_swiftFlix {
+    width: 18.5rem;
+    height: 18.5rem;
+}
+
+.apresentaçao_descricao_portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.apresentaçao_descricao_portfolio a {
+    margin: 5rem 0 0 0.6rem;
+}
+
+.apresentaçao_descricao_logo_portfolio {
+    display: flex;
+    gap: 3rem;
+}
+
+.apresentaçao_descricao_logo_portfolio p{
+    padding-top: 2rem;
+}
+
+.apresentaçao__conteudo__contacts {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    width: 37rem;
+}
+
+.apresentaçao_section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.apresentaçao_section_forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;             
+    max-width: 720px;        
+    /* margin: 2rem auto 0;      */
+}
+
+
+
+.apresentaçao_section_forms form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+
+}
+
+#apresentaçao_botao_forms {
+    width: 13.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    border: 3px outset var(--cor-secundaria);
+    border-radius: 16px;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-family:  'Montserrat', sans-serif;
+    font-weight: 600;
+    gap: 16px;
+    transition: color 0.5s ease;
+}
+
+
+#apresentaçao_botao_forms:hover {
+    color: var(--cor-primaria);
+    background-color: var(--cor-hover);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.65rem;
+    border: 1px solid var(--cor-primaria);
+}
+
+
+#forms_name{
+    padding: 1rem;
+
+}
+
+#forms_name_textField{
+    padding: 1rem ;
+    width: 150%;
+    border-radius: 1rem;
+    background-color: var(--cor-botao);
+    color: var(--cor-secundaria);
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    border: solid 2px var(--cor-terciaria);
+
+}
+
+    
+#forms_email_textField{
+    padding:  1rem ;
+    width: 150%;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--cor-botao);
+    color: var(--cor-secundaria);
+    border: solid 2px var(--cor-terciaria);
+
+
+
+}
+
+#forms_description_textField{
+    padding:  3rem ;
+    width: 150%;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--cor-botao);
+    color: var(--cor-secundaria);
+    border: solid 2px var(--cor-terciaria);
+  
+
+}
+
 
 @media (max-width:1350px) {
 
